@@ -12,7 +12,9 @@ direktorijoje gauti os.listdir.
 
 Statusas:
 Pradėta daryti pirma uždavinio dalis, pačių metodų išbandymas ir surinkimas į
-vieną vietą. TODO:reikia aprašyti klasę statsFile, kuri paimtų failą ir
+vieną vietą. 
+
+TODO:reikia aprašyti klasę statsFile, kuri paimtų failą ir
 gražintų reikalingą statistiką (žodžiai ir raidės) Tada reikia klasės kuri
 apimtų-sumuotų kelių failų(klases) statistikas.
 
