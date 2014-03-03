@@ -1,1 +1,18 @@
-Hello world!
+FileStats
+
+1-as laboratorinis darbas (Python)
+
+Darbo aprašymas:
+Apskaičiuoti nurodytoje direktorijoje esančių failų statistiką ir ją išvesti į
+failą. Statistika: pirmiausia išvesti bendrai visuose failuose kokie ir kiek
+kartų pasikartoja a) žodžiai b) simboliai. Antra, į tą patį failą išvesti tą
+pąčią statistiką apskaičiuotą kiekvienam failui atskirai. Naudotina: parametrų
+perdavimui iš komandinės eilutės į  programą sys.argv; failų sąrašui
+direktorijoje gauti os.listdir.
+
+Statusas:
+Pradėta daryti pirma uždavinio dalis, pačių metodų išbandymas ir surinkimas į
+vieną vietą. TODO:reikia aprašyti klasę statsFile, kuri paimtų failą ir
+gražintų reikalingą statistiką (žodžiai ir raidės) Tada reikia klasės kuri
+apimtų-sumuotų kelių failų(klases) statistikas.
+
