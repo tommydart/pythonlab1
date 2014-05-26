@@ -9,7 +9,6 @@ class FolderStats:
     words = dict()
     letters = dict()
     folder = ''
-    total = ''
 
     def __init__(self, folderName):
         self.folder = folderName
@@ -22,20 +21,32 @@ class FolderStats:
             for file in listdir(folder):
                 self.folder_stats(folder + "\\" + file)
         else:
-            self.file_stats(folder)
+            file_words, file_letters = self.file_stats(folder)
+            for word in file_words:
+                if word not in self.words.keys():
+                    self.words[word] = 0
+                self.words[word] += file_words[word]
+            for letter in file_letters:
+                if letter not in self.letters.keys():
+                    self.letters[letter] = 0
+                self.letters[letter] += file_letters[letter]
 
     def file_stats(self, file):
+        words = dict()
+        letters = dict()
         f = open(file, 'r')
         text = f.read()
         for word in text.split(' '):
-            if word not in self.words.keys():
-                self.words[word] = 0
-            self.words[word] = self.words[word] + 1
+            if word not in words.keys():
+                words[word] = 0
+            words[word] = words[word] + 1
         for letter in text:
-            if letter not in self.letters.keys():
-                self.letters[letter] = 0
-            self.letters[letter] = self.letters[letter] + 1
-        self.total += text
+            if letter not in letters.keys():
+                letters[letter] = 0
+            letters[letter] = letters[letter] + 1
+        return words, letters
+
+
 
 
 stats = FolderStats(argv[1])
